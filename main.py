@@ -14,11 +14,8 @@ Base = declarative_base()
 
 # 2. DB Model (Jadval)
 class Item(Base):
-    tablename = "items"  # Aynan mana shu qatorni qo'shasiz
-    
-    # qolgan id, name, price degan kodlaringiz shu yerda davom etadi...
-    tablename = "items"
-    
+  
+    __tablename__ = "items"
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True)
     description = Column(String, nullable=True)
